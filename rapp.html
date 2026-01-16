@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс доллара</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        #number {
+            font-size: 72px;
+            margin: 40px;
+            color: #2c3e50;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+Курс доллара на сегодня:
+    <div id="number">?</div>
+    <button onclick="generateNumber()">руб. за 1 доллар США</button>
+
+    <script>
+        function generateNumber() {
+            const randomNum = Math.floor(Math.random() * 100) + 1;
+            document.getElementById('number').textContent = randomNum;
+        }
+    </script>
+</body>
+</html>
